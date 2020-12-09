@@ -3,6 +3,7 @@
   --clr-neutral-100: #ffffff;
   --clr-neutral-200: #dddddd;
   --clr-neutral-300: #9fb8ad;
+  --clr-neutral-400: #444444;
 
   --clr-primary-400: #82a8a4;
   --clr-primary-600: #51869a;
@@ -62,10 +63,11 @@ body {
     #8eafa7,
     #9fb8ad
   );
+  min-height: 100vh;
   font-family: var(--ff-base);
   font-size: var(--fs-300);
-  line-height: 1;
-  min-height: 100vh;
+  line-height: 1.3;
+  color: var(--clr-neutral-400);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,9 +146,7 @@ body > * {
 }
 
 footer {
-  padding: 0 3rem;
-  font-size: var(--fs-200);
-  text-align: center;
+  padding: 0 2rem;
 }
 
 .preview {
@@ -160,7 +160,6 @@ footer {
 /*******************/
 
 h1 {
-  line-height: 1.1;
   font-size: var(--fs-700);
 }
 
@@ -180,7 +179,14 @@ label,
 a {
   text-decoration: none;
   font-weight: var(--fw-700);
-  color: #000;
+  color: var(--clr-neutral-100);
+  border-bottom: 1px solid var(--clr-neutral-100);
+  transition: color 300ms ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-primary-400);
 }
 
 input {
@@ -188,5 +194,12 @@ input {
   border-bottom: 3px solid var(--clr-neutral-200);
   padding: 0.5rem 0;
   font-size: inherit;
+  text-align: center;
+}
+
+footer {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-300);
+  color: var(--clr-neutral-100);
   text-align: center;
 }
