@@ -9,6 +9,54 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="container flow-content">
+      <h1 class="title">Lighten / Darken Color</h1>
+
+      <div class="hex-input flow-content">
+        <label for="hex">Select Color (Hex)</label>
+        <input name="hex" type="text" id="hexInput" placeholder="#000000" />
+      </div>
+
+      <div class="toggle flow-content">
+        <p>Toggle goes here</p>
+      </div>
+
+      <div class="sliding-scale flow-content">
+        <label for="slider" id="sliderText">0%</label>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          class="slider"
+          id="slider"
+          name="slider"
+        />
+      </div>
+
+      <div class="output">
+        <div class="input-color flow-content">
+          <p class="output-title">Input color</p>
+          <div class="preview" id="inputColor"></div>
+        </div>
+
+        <div class="altered-color flow-content">
+          <p class="output-title">Altered color</p>
+          <div class="preview" id="alteredColor"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="credits">
+      <p>
+        Created by <a href="https://github.com/kvcarido">AOK</a> using Scrimba's
+        <a href="https://scrimba.com/learn/javascriptcolortool"
+          >Build a JS Color Tool</a
+        >
+        course.
+      </p>
+    </footer>
+
     <script src="js/index.js" async defer></script>
   </body>
 </html>

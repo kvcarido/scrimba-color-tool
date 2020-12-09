@@ -1,0 +1,144 @@
+:root {
+  --spacer: 1rem;
+
+  /* colors */
+
+  /* font family */
+
+  /* font sizes */
+  --fs-200: 0.6875rem;
+  --fs-400: 1.125rem;
+  --fs-700: 1.5rem;
+
+  /* font weight */
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/*********/
+/* reset */
+/*********/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: var(--fs-400);
+  line-height: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body > * {
+  margin-top: 1.5rem;
+}
+
+/*******************/
+/* utility classes */
+/*******************/
+
+.flow-content > * + * {
+  margin-top: var(--flow-spacer, var(--spacer));
+}
+
+.text-shadow {
+  /* brb */
+}
+
+/******************/
+/* general layout */
+/******************/
+
+.container {
+  --flow-spacer: 1.5rem;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  background: lavender;
+}
+
+.container > div,
+.title {
+  text-align: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.output > div {
+  flex-basis: 100%;
+}
+
+@media (min-width: 40rem) {
+  .container {
+    width: min(75%, 50rem);
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 1rem;
+  }
+
+  .output {
+    flex-direction: row;
+  }
+}
+
+footer {
+  padding: 0 3rem;
+  font-size: var(--fs-200);
+  text-align: center;
+}
+
+.preview {
+  width: 100%;
+  height: 5rem;
+  outline: black 1px dashed;
+}
+
+/*******************/
+/* general styling */
+/*******************/
+
+h1 {
+  line-height: 1.1;
+  font-size: var(--fs-700);
+}
+
+label,
+.output-title {
+  font-weight: var(--fw-700);
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font-weight: var(--fw-700);
+  color: #000;
+}
+
+input {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+  font-size: inherit;
+  text-align: center;
+}
